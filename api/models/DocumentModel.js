@@ -5,7 +5,13 @@ const docTypes = require('../../database/docTypes');
 
 class DocumentModel {
     getDocuments(id) {
-        return dataBase.findOne({docType: docTypes.COMMENT, _id:id})
+        return dataBase.findOne({docType: docTypes.COMMENT, _id: id})
+    }
+    setComments(id,body) {
+        return dataBase.updateOne(
+            { docType: docTypes.COMMENT, _id: id },
+            { $set: { "comments" : body } }
+         );
     }
 }
 module.exports.DocumentModel = DocumentModel;

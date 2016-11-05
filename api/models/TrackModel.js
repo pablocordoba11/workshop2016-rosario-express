@@ -4,7 +4,6 @@ const dataBase = require('../../database/Database').instance;
 const docTypes = require('../../database/docTypes');
 
 class TrackModel {
-
     getList () {
         return dataBase.find({docType: docTypes.TRACK});
     }

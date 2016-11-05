@@ -8,6 +8,11 @@ class DocumentController {
               .then(documents => res.json(documents))
               .catch(error => res.json({error: error.message}));
     }
+    setDocuments(req, res){
+      documents.setComments(req.params.trackId,req.body)
+              .then(documents => res.json(documents))
+              .catch(error => res.json({error: error.message}));
+    }
 }
 
 exports.DocumentController = DocumentController;

@@ -18,5 +18,6 @@ router.get('/bands', bandsController.getBands); //Bands route
 router.get('/bands/:bandId', bandsController.getBand); //Bands route
 router.get('/bands/:bandId/artists', artistsController.getArtists); //Artists route
 router.get('/tracks/:trackId/comments', documentsController.getDocuments); //Documents route
+router.post('/tracks/:trackId/comments/', documentsController.setDocuments); //Documents route
 
 module.exports = router;
